@@ -1,0 +1,15 @@
+.table{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+.table-head {
+   background-color: #074684;
+   color: white;
+   height: 21px;
+   text-align: center;
+}
+.table-row{
+    /* background-color:  #F8FBFD ; */
+    font-weight: 700;
+    text-align: center;
+}
