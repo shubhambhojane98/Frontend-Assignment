@@ -24,33 +24,39 @@ const SidePanel = ({ show, setShow, selectedTeam }) => {
             <div>
               <div className="game">
                 <table>
-                  <tr>
-                    <td>Team Full Name</td>
-                    <td>{selectedTeam?.home_team.full_name}</td>
-                  </tr>
-                  <tr>
-                    <th>Random Game Detail</th>
-                  </tr>
-                  <tr>
-                    <th>Date</th>
-                    <th>{selectedTeam?.date.slice(0, 10)}</th>
-                  </tr>
-                  <tr>
-                    <th>Home Team</th>
-                    <th>{selectedTeam?.home_team.name}</th>
-                  </tr>
-                  <tr>
-                    <th>Home Team Score</th>
-                    <th>{selectedTeam?.home_team_score}</th>
-                  </tr>
-                  <tr>
-                    <th>Visitor Team</th>
-                    <th>{selectedTeam?.visitor_team.name}</th>
-                  </tr>
-                  <tr>
-                    <th>Visitor Team Score</th>
-                    <th>{selectedTeam?.visitor_team_score}</th>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>Team Full Name</td>
+                      <td>{selectedTeam?.home_team.full_name}</td>
+                    </tr>
+                    <tr>
+                      <td>Season</td>
+                      <td>{selectedTeam?.season}</td>
+                    </tr>
+                    <tr>
+                      <th>Random Game Details:</th>
+                    </tr>
+                    <tr>
+                      <th>Date</th>
+                      <th>{selectedTeam?.date.slice(0, 10)}</th>
+                    </tr>
+                    <tr>
+                      <th>Home Team</th>
+                      <th>{selectedTeam?.home_team.name}</th>
+                    </tr>
+                    <tr>
+                      <th>Home Team Score</th>
+                      <th>{selectedTeam?.home_team_score}</th>
+                    </tr>
+                    <tr>
+                      <th>Visitor Team</th>
+                      <th>{selectedTeam?.visitor_team.name}</th>
+                    </tr>
+                    <tr>
+                      <th>Visitor Team Score</th>
+                      <th>{selectedTeam?.visitor_team_score}</th>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>

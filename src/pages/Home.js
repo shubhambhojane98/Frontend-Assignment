@@ -3,10 +3,12 @@ import SearchBar from "../component/SearchBar/SearchBar";
 import DataTable from "../component/DataTable/DataTable";
 import Pagination from "../component/Pagination/Pagination";
 import "./Home.css";
+import useData from "../hooks/useAllGamesData";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [page, setPage] = useState(1);
+  const { isloading } = useData();
 
   return (
     <div className="main-container">
@@ -22,7 +24,9 @@ const Home = () => {
       </div>
 
       <div>
-        <Pagination page={page} setPage={(page) => setPage(page)} />
+        {!searchTerm.length > 0 && !isloading && (
+          <Pagination page={page} setPage={(page) => setPage(page)} />
+        )}
       </div>
     </div>
   );

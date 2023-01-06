@@ -16,33 +16,39 @@ const Pagination = ({ page, setPage }) => {
   };
 
   return (
-    <div className="pagination">
-      <span
-        onClick={() => selectPageHandler(page - 1)}
-        className="pagination-button"
-      >
-        {"<"}
-      </span>
-
-      {[...Array(Math.round(teams.length / 8))].map((_, i) => {
-        return (
+    <>
+      {teams.length > 0 ? (
+        <div className="pagination">
           <span
-            key={i}
+            onClick={() => selectPageHandler(page - 1)}
             className="pagination-button"
-            onClick={() => selectPageHandler(i + 1)}
           >
-            {i + 1}
+            {"<"}
           </span>
-        );
-      })}
 
-      <span
-        onClick={() => selectPageHandler(page + 1)}
-        className="pagination-button"
-      >
-        {">"}
-      </span>
-    </div>
+          {[...Array(Math.round(teams.length / 8))].map((_, i) => {
+            return (
+              <span
+                key={i}
+                className="pagination-button"
+                onClick={() => selectPageHandler(i + 1)}
+              >
+                {i + 1}
+              </span>
+            );
+          })}
+
+          <span
+            onClick={() => selectPageHandler(page + 1)}
+            className="pagination-button"
+          >
+            {">"}
+          </span>
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 };
 

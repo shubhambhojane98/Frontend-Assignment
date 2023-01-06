@@ -9,7 +9,17 @@
    text-align: center;
 }
 .table-row{
-    /* background-color:  #F8FBFD ; */
     font-weight: 700;
     text-align: center;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+td,th{
+  min-width: 10vw;
 }
